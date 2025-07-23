@@ -1,75 +1,25 @@
-# Nuxt Minimal Starter
+# Datahumble Game Dashboard
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt 4 tabanlı bu modern dashboard uygulaması, oyun verilerinin görselleştirilmesini ve analiz edilmesini kolaylaştırmak amacıyla geliştirilmiştir.
 
-## Setup
+## Kullanılan Teknolojiler
 
-Make sure to install dependencies:
+| Teknoloji         | Açıklama                                       |
+|------------------|------------------------------------------------|
+| **Nuxt 4**        | Vue 3 tabanlı full-stack framework             |
+| **Vue 3.5+**      | Composition API destekli modern yapı           |
+| **Tailwind CSS 4**| Utility-first CSS framework                    |
+| **Chart.js 4.5**  | Gelişmiş grafik ve chart görselleştirmeleri    |
+| **Headless UI**   | Erişilebilirlik odaklı arayüz bileşenleri      |
+| **TypeScript**    | Tip güvenliği ve daha sağlam kodlama yapısı    |
+
+---
+
+## Kurulum
 
 ```bash
-# npm
+# Bağımlılıkları yükle
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Geliştirme sunucusunu başlat
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
