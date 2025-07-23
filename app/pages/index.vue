@@ -58,7 +58,7 @@ const formattedRevenue = computed(() => {
         {{ overviewData?.name }}
       </div>
       <div
-        class="flex flex-col sm:flex-row gap-4 sm:gap-[21px] mb-8 px-4 sm:px-6 md:px-8"
+        class="flex flex-col sm:flex-row gap-[21px] mb-8 ml-4 sm:ml-6 md:ml-8"
       >
         <Widget type="price" :value="`$${overviewData?.price.toString() || ''}`" />
         <Widget type="download" :value="`${formattedDownloads}k`" />
