@@ -87,7 +87,7 @@ onMounted(() => {
           label: "Watch Time",
           data: performanceData.value.watchTime,
           fill: true,
-          borderColor: "#4A90E2",
+          borderColor: "#008DE4",
           backgroundColor: "rgba(74, 144, 226, 0.2)",
           tension: 1,
           pointRadius: 0,
@@ -96,7 +96,7 @@ onMounted(() => {
           label: "Engagement",
           data: performanceData.value.engagement,
           fill: true,
-          borderColor: "#F5A623",
+          borderColor: "#F68D41",
           backgroundColor: "rgba(245, 166, 35, 0.2)",
           tension: 1,
           pointRadius: 0,
@@ -139,12 +139,17 @@ const handleSelect = (option: string) => {
 </script>
 
 <template>
-  <div class="w-full max-w-[1200px] mx-auto p-4 sm:p-6 md:p-8">
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="text-xl font-semibold text-black fontPoppins">Performance</h2>
+  <div class="w-full max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 py-4">
+    <div
+      class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4"
+    >
+      <h2 class="text-lg sm:text-xl font-semibold text-black fontPoppins">
+        Performance
+      </h2>
+
       <Menu as="div" class="relative inline-block text-left">
         <MenuButton
-          class="bg-[#F5F7FB] text-[#777777] text-sm fontPoppins rounded-md px-3 py-1 min-w-[115px]"
+          class="bg-[#F5F7FB] text-[#777777] text-sm fontPoppins rounded-md px-3 py-1 min-w-[115px] text-left"
         >
           {{ selectedDate }}
         </MenuButton>
@@ -169,16 +174,16 @@ const handleSelect = (option: string) => {
         </MenuItems>
       </Menu>
     </div>
-    <div class="w-full h-[245px]">
+    <div class="w-full h-[200px] sm:h-[245px]">
       <canvas ref="canvasRef"></canvas>
     </div>
     <div class="mt-6">
-      <h3 class="text-xl font-semibold text-black fontPoppins mb-3">
+      <h3 class="text-lg sm:text-xl font-semibold text-black fontPoppins mb-3">
         Description
       </h3>
-      <div class="bg-[#F5F7FB] rounded-xl w-full p-4">
+      <div class="bg-[#F5F7FB] rounded-xl w-full p-4 sm:p-6">
         <span
-          class="text-[#777777] text-sm font-medium fontPoppins leading-relaxed"
+          class="text-sm sm:text-base text-[#777777] font-medium fontPoppins leading-relaxed"
         >
           {{ overviewData?.description }}
         </span>

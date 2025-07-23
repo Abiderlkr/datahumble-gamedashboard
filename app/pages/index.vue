@@ -48,19 +48,29 @@ const formattedRevenue = computed(() => {
   return 0;
 });
 </script>
+
 <template>
-  <div class="flex">
-    <div>
+  <div class="flex flex-col lg:flex-row">
+    <div class="w-full lg:w-3/5">
       <div
-        class="fontPoppins font-semibold text-4xl text-black pb-4.5 pt-7 pl-9">{{ overviewData?.name }}</div>
-      <div class="flex gap-[21px] mb-8 ml-8">
-        <Widget type="price" :value="`$${overviewData?.price.toString() || ''}`"/>
+        class="fontPoppins font-semibold text-2xl sm:text-3xl md:text-4xl text-black pb-4.5 pt-8 px-4 sm:px-6 md:px-9"
+      >
+        {{ overviewData?.name }}
+      </div>
+      <div
+        class="flex flex-col sm:flex-row gap-4 sm:gap-[21px] mb-8 px-4 sm:px-6 md:px-8"
+      >
+        <Widget type="price" :value="`$${overviewData?.price.toString() || ''}`" />
         <Widget type="download" :value="`${formattedDownloads}k`" />
         <Widget type="revenue" :value="`${formattedRevenue}m`" />
       </div>
-      <div class="bg-white rounded-3xl pt-7 ml-8"><ChartCard /></div>
+      <div class="bg-white rounded-3xl pt-7 px-4 sm:px-6 md:ml-8 md:mr-4">
+        <ChartCard />
+      </div>
     </div>
-    <div class="w-[500px] bg-white rounded-3xl p-6 flex flex-col ml-8">
+    <div
+      class="w-full lg:w-[500px] bg-white rounded-3xl p-4 sm:p-6 flex flex-col mt-6 lg:mt-0 mx-4 lg:ml-8"
+    >
       <Description />
       <div class="mt-6">
         <div class="flex items-center gap-2 mb-2">
@@ -80,7 +90,7 @@ const formattedRevenue = computed(() => {
             Stream Stats
           </h3>
         </div>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <ChangeWidget
             type="hoursWatched"
             :value="streamData?.hoursWatched.deltaPercentage?.toFixed(1) || ''"
@@ -89,9 +99,7 @@ const formattedRevenue = computed(() => {
           />
           <ChangeWidget
             type="averageViewers"
-            :value="
-              streamData?.averageViewers.deltaPercentage?.toFixed(1) || ''
-            "
+            :value="streamData?.averageViewers.deltaPercentage?.toFixed(1) || ''"
             :delta="streamData?.averageViewers.delta || 0"
             :delta-percentage="streamData?.averageViewers.deltaPercentage || 0"
           />
