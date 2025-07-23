@@ -23,3 +23,8 @@ npm install
 
 # Geliştirme sunucusunu başlat
 npm run dev
+```
+## Live Demo
+
+Uygulamayı canlı görüntülemek için tıklayın:  
+[https://datahumble-gamedashboard.vercel.app](https://datahumble-gamedashboard.vercel.app)
